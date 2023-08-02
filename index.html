@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de todo</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <h2>Lista de todo</h2>
+
+    <div id="contenido">
+        <div class="container">
+
+            <h1>Lista de todo</h1>
+            <div class="row">
+                <div class="six columns">
+                    <label for="tweet">Tareas:</label>
+                    <form  id="formulario">
+                            <label for="miAreaTexto"></label>
+                            <br>
+                            <textarea id="miAreaTexto" name="miAreaTexto" rows="4" cols="50" placeholder="Ingresa tu texto"></textarea>
+                            <button type="button">Agregar</button>
+                    </form>
+                </div>
+                <div class="six columns">
+                    <h2>Mis Tareas</h2>
+                    <div id="lista-tareas"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+
 </body>
 </html>
