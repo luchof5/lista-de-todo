@@ -8,7 +8,13 @@ let tareas = [];
 eventListeners();
 
 function eventListeners() {
-    formulario.addEventListener('submit', agregarTexto)
+    formulario.addEventListener('submit', agregarTexto);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        tareas = Jason.parse(localStorage.getItem('texto')) || [];
+
+        crearHtml()
+    })
 }
 
 
@@ -17,8 +23,8 @@ function agregarTexto(e) {
     e.preventDefault();
 
     // Text area
-    const antes = document.querySelector('#miAreaTexto').value;
-    const texto = antes.trim();
+    const tex = document.querySelector('#miAreaTexto').value;
+    const texto = tex.trim();
 
     console.log(texto);
 
@@ -81,6 +87,13 @@ function crearHtml() {
             console.log(tareas)
         });
     }
+
+    sincronizarStorage()
+}
+
+// Agregar los tweets actuales a LocalStorage
+function sincronizarStorage() {
+    localStorage.setItem('texto', JSON.stringify(tareas));
 }
 
 // Elminar tarea
