@@ -17,7 +17,8 @@ function agregarTexto(e) {
     e.preventDefault();
 
     // Text area
-    const texto = document.querySelector('#miAreaTexto').value;
+    const antes = document.querySelector('#miAreaTexto').value;
+    const texto = antes.trim();
 
     console.log(texto);
 
@@ -65,7 +66,7 @@ function crearHtml() {
         tareas.forEach(texto => {
 
             const li = document.createElement('li');
-            li.innerHTML = texto.texto;
+            li.innerText = texto.texto;
             // Botón de eliminar
             const btnElminar = document.createElement('button');
             btnElminar.innerHTML = 'X';
@@ -77,6 +78,7 @@ function crearHtml() {
             btnElminar.onclick = () => {
                 borrarTarea(texto.id)
             }     
+            console.log(tareas)
         });
     }
 }
