@@ -1,0 +1,99 @@
+h1 {
+    background-color: red;
+    text-align: center;
+}
+
+.tarea {
+    font-size: 25px;
+}
+
+body {
+    background-color: black;
+}
+
+#contenido {
+    margin-top: 40px;
+}
+
+.styled-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .styled-button:hover {
+    background-color: #2980b9;
+  }
+
+  #miAreaTexto {
+    resize: none;
+  width: 300px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  }
+
+.borrar-tarea,
+.borrar-tarea:hover {
+    float: right;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+.error {
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    max-width: 400px;
+    margin: 0 auto;
+    color: white;
+}
+
+li {
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+    margin-bottom: 10px; /* Agrega espacio entre los elementos <li> */
+    padding: 5px; /* Agrega espacio interno alrededor del contenido del <li> */
+    border: 1px solid #ccc; /* Agrega un borde para resaltar los elementos */
+    background-color: #f0f0f0; /* Agrega un color de fondo */
+}
+
+.column-container {
+    display: flex;  
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+    padding: 25px;
+    margin: 50px; 
+    box-sizing: border-box;
+    min-width: 360px;
+    flex-direction: column;
+  }
+  
+  .column-left {
+    background-color: #f2f2f2;
+  }
+  
+  .column-right {
+    background-color: #e0e0e0;
+  }
+  

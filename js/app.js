@@ -73,18 +73,19 @@ function crearHtml() {
 
             const li = document.createElement('li');
             li.innerText = texto.texto;
+            
             // Botón de eliminar
-            const btnElminar = document.createElement('button');
+            const btnElminar = document.createElement('a');
+            btnElminar.classList.add('borrar-tarea')
             btnElminar.innerHTML = 'X';
-            
-            
-            li.appendChild(btnElminar);
-            listaTareas.appendChild(li);
             
             btnElminar.onclick = () => {
                 borrarTarea(texto.id)
             }     
-            console.log(tareas)
+
+            li.appendChild(btnElminar);
+            listaTareas.appendChild(li);
+
         });
     }
 

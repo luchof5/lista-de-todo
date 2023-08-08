@@ -10,18 +10,18 @@
 
     <div id="contenido">
         <h1>Lista de todo</h1>
-        <div>
-            <div>
-                <label for="tweet">Tareas:</label>
+        <div class="column-container">
+            <div class="column column-left">
+                <label for="tarea" class="tarea">Tarea:</label>
                 <form  id="formulario">
                         <label for="miAreaTexto"></label>
                         <br>
                         <textarea id="miAreaTexto" name="miAreaTexto" rows="4" cols="50" 
                         placeholder="Ingresa tu texto"></textarea>
-                        <button type="submit">Agregar</button>
+                        <button type="submit" class="styled-button">Agregar</button>
                 </form>
             </div>
-            <div>
+            <div class="column column-right">
                 <h2>Mis Tareas</h2>
                 <div id="lista-tareas"></div>
             </div>
